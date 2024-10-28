@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./assets/css/output.css" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        transition: 0.15s ease-in-out;
+      }
+      .playBtn:hover {
+        width: fit-content;
+        padding-inline: 25px;
+      }
+      .playBtn:hover span {
+        display: block;
+      }
+
+      .testimonial-image {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 9999px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        padding: 4px;
+        border: 1px solid teal;
+      }
+
+      .img-1 {
+        width: 90px;
+        height: 90px;
+        top: 10%;
+        left: 15%;
+      }
+      .img-2 {
+        top: 15%;
+        right: 15%;
+      }
+      .img-3 {
+        bottom: 20%;
+        left: 10%;
+      }
+      .img-4 {
+        width: 80px;
+        height: 80px;
+        bottom: 15%;
+        right: 20%;
+      }
+      .img-5 {
+        width: 80px;
+        height: 80px;
+        bottom: -25%;
+        right: 50%;
+      }
+      .img-6 {
+        width: 60px;
+        height: 60px;
+        bottom: -12%;
+        right: 10%;
+      }
+      @media screen and (max-width: 660px) {
+        .img-3 {
+          bottom: 35%;
+          left: 5%;
+        }
+        .img-5 {
+          display: none;
+        }
+        .img-4 {
+          width: 50px;
+          height: 50px;
+          bottom: 25%;
+          right: -5%;
+        }
+        .img-6 {
+          width: 60px;
+          height: 60px;
+          bottom: -12%;
+          right: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#0A0A0A] w-screen overflow-x-hidden">
+    <!-- header -->
+    <header class="flex items-center justify-between px-6 py-3 lg:px-20">
+      <h1
+        class="bg-gradient-to-tr from-orange-500 to-red-500 bg-clip-text text-2xl font-extrabold text-transparent font-['Roboto Mono']"
+      >
+        Proton
+      </h1>
+      <nav onmouseleave="this.classList.toggle('max-lg:hidden');" id="menu" class="lg:space-x-5 max-lg:hidden text-sm font-['Nunito Sans'] text-slate-600 max-lg:fixed max-lg:bg-black right-0 top-0 max-lg:w-[70vw] max-lg:flex flex-col items-center justify-center max-lg:h-screen max-lg:z-[999]">
+        <a href="./index.html" class="text-center hover:text-slate-200 max-lg:w-full max-lg:text-xl max-lg:my-5">Home</a>
+        <a href="./podcasts.html" class="text-center hover:text-slate-200 max-lg:w-full max-lg:text-xl max-lg:my-5">Podcasts</a>
+        <a href="./about.html" class="text-center hover:text-slate-200 max-lg:w-full max-lg:text-xl max-lg:my-5">About</a>
+        <a href="./contact-us.html" class="text-center hover:text-slate-200 max-lg:w-full max-lg:text-xl max-lg:my-5">ContactUs</a>
+      </nav>
+      <a href="./podcasts.html"><button
+        class="items-center justify-between hidden py-3 space-x-4 text-lg border-[1px] text-orange-500  border-orange-500 lg:flex px-7 rounded-xl"
+      >
+        <small>Explore</small>
+        <ion-icon name="search-outline"></ion-icon>
+      </button></a>
+      <button onclick="document.querySelector('#menu').classList.toggle('max-lg:hidden');" class="sticky flex items-center justify-end w-12 h-12 text-3xl text-orange-500 lg:hidden">
+        &#9776;
+      </button>
+    </header>
+    <!-- lander -->
+    <section class="px-6 py-16 lg:h-screen lg:py-10 lg:px-20">
+      <center>
+        <h1
+          class="text-slate-200 lg:text-5xl font-semibold font-['Roboto Mono'] lg:w-2/3 leading-[55px] text-5xl"
+        >
+          Welcome to <span class="text-orange-500">Proton Podcasts</span><div class="hidden lg:inline">The
+          home of conversational entertainment.</div>
+        </h1>
+        <p
+          class="mt-6 text-sm font-['Nunito Sans'] font-light lg:w-1/2 w-full px-10 lg:px-10 lg:text-center text-center text-slate-600"
+        >
+          Look no further! Proton delivers
+          thought-provoking content that dives deep , offering listeners a fresh
+          perspective .
+        </p>
+      </center>
+
+      <div class="w-full lg:h-[80vh] h-[35vh] mt-24 sticky">
+        <button
+          class="playBtn lg:w-[90px] lg:h-[90px] w-[70px] h-[70px] rounded-full bg-orange-500 absolute lg:-top-12 -top-8 left-1/2 border-[10px] border-[#0A0A0A] -translate-x-1/2 flex items-center justify-center text-3xl space-x-5"
+        >
+          <ion-icon name="play-outline"></ion-icon>
+          <span class="hidden text-xl">Start Listening</span>
+        </button>
+        <img
+          src="./assets/images/pov-man-woman-recording-live-discussion-camera-doing-podcast-episode-together-lifestyle-influencer-talking-female-guest-studio-with-rpg-neon-lights-equipment.jpg"
+          class="object-cover w-full h-full rounded-3xl"
+          alt=""
+        />
+      </div>
+    </section>
+     <section class="topics-section lg:mt-[50vh] mt-0 lg:px-20 px-10 mb-20">
+      <center>
+        <small class="text-lg text-orange-600 font-['Nunito Sans'] font-extralight uppercase"
+          >TOPICS</small
+        >
+        <h2 class="mt-4 mb-20 text-3xl font-semibold text-center leading-[45px] lg:leading-normal lg:text-5xl text-slate-200 px-6 lg:px-0">
+         What you'll find on Proton
+      </h2>
+      </center>
+      <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-3">
+        <div class="p-6 bg-slate-800 rounded-3xl">
+          <h3 class="text-2xl font-semibold text-orange-500">
+            Insightful Conversations
+          </h3>
+          <p class="mt-4 text-slate-500">
+            Each episode features expert interviews, real-life stories, and deep
+            dives into various topics. Perfect for beginners and pros alike.
+          </p>
+        </div>
+        <div class="p-6 bg-slate-800 rounded-3xl">
+          <h3 class="text-2xl font-semibold text-orange-500">
+            Actionable Advice
+          </h3>
+          <p class="mt-4 text-slate-500">
+            Our guests share actionable tips and strategies for immediate
+            application to improve skills or grow your business.
+          </p>
+        </div>
+        <div class="p-6 bg-slate-800 rounded-3xl">
+          <h3 class="text-2xl font-semibold text-orange-500">
+            Exclusive Content
+          </h3>
+          <p class="mt-4 text-slate-500">
+            Enjoy bonus episodes, behind-the-scenes insights, and exclusive
+            interviews only available to our subscribers.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- sample podcasts -->
+    <section class="py-16">
+      <center>
+        <small class="lg:text-lg text-md text-orange-600 font-['Nunito Sans'] font-extralight uppercase"
+          >Tune In Now</small
+        >
+        <h1
+          class="lg:text-5xl text-3xl text-slate-200 font-['Roboto Mono'] font-semibold mt-4"
+        >
+          The Latest From Proton
+        </h1>
+      </center>
+
+      <div
+        class="px-10 mt-16 overflow-x-auto lg:grid lg:mt-20 lg:grid-cols-3 lg:gap-16 lg:px-20 snap-x snap-mandatory whitespace-nowrap max-md:space-x-10"
+        style="scrollbar-width: none"
+      >
+        <div class="inline-block overflow-hidden whitespace-normal rounded-3xl snap-center w-[250px] h-[250px] lg:w-full lg:h-full">
+          <div class="relative">
+            <img
+              src="./assets/images/dddepth-052.jpg"
+              class="object-cover w-full h-full"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 flex flex-col items-start justify-end w-full p-6 overflow-hidden text-white h-2/3 bg-gradient-to-t from-black to-transparent"
+            >
+              <h1 class="text-2xl font-semibold font-['Roboto Mono']">
+                Episode 1 - Introduction to Proton
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="inline-block overflow-hidden whitespace-normal rounded-3xl snap-center w-[250px] h-[250px] lg:w-full lg:h-full">
+          <div class="relative">
+            <img
+              src="./assets/images/dddepth-291.jpg"
+              class="object-cover w-full h-full"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 flex flex-col items-start justify-end w-full p-6 overflow-hidden text-white h-2/3 bg-gradient-to-t from-black to-transparent"
+            >
+              <h1 class="text-2xl font-semibold font-['Roboto Mono']">
+                Episode 2 - The Future of Podcasting
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="inline-block overflow-hidden whitespace-normal rounded-3xl snap-center w-[250px] h-[250px] lg:w-full lg:h-full">
+          <div class="relative">
+            <img
+              src="./assets/images/dddepth-345.jpg"
+              class="object-cover w-full h-full"
+              alt=""
+            />
+            <div
+              class="absolute bottom-0 flex flex-col items-start justify-end w-full p-6 overflow-hidden text-white h-2/3 bg-gradient-to-t from-black to-transparent"
+            >
+              <h1 class="text-2xl font-semibold font-['Roboto Mono']">
+                Episode 3 - An Exclusive Interview
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <center>
+        <a href="./podcasts.html"><button
+          class="border-[1px] border-orange-500 text-md text-slate-300 font-light px-8 py-4 mt-14 rounded-full"
+        >
+          All Podcasts
+        </button></a>
+      </center>
+    </section>
+    <!-- testimonials -->
+    <section class="w-screen lg:h-screen h-[60vh]">
+      <section
+        class="relative w-full p-10 mx-auto text-center rounded-lg h-1/2"
+      >
+        <!-- Scattered Images -->
+        <img
+          src="./assets/images/dddepth-052.jpg"
+          alt="User 1"
+          class="testimonial-image img-1"
+        />
+        <img
+          src="./assets/images/pov-man-woman-recording-live-discussion-camera-doing-podcast-episode-together-lifestyle-influencer-talking-female-guest-studio-with-rpg-neon-lights-equipment.jpg"
+          alt="User 2"
+          class="testimonial-image img-2"
+        />
+        <img
+          src="./assets/images/dddepth-345.jpg"
+          alt="User 3"
+          class="testimonial-image img-3"
+        />
+        <img
+          src="./assets/images/dddepth-291.jpg"
+          alt="User 4"
+          class="testimonial-image img-4"
+        />
+        <img
+          src="./assets/images/dddepth-052.jpg"
+          alt="User 5"
+          class="testimonial-image img-5"
+        />
+        <img
+          src="./assets/images/pov-man-woman-recording-live-discussion-camera-doing-podcast-episode-together-lifestyle-influencer-talking-female-guest-studio-with-rpg-neon-lights-equipment.jpg"
+          alt="User 6"
+          class="testimonial-image img-6"
+        />
+
+        <!-- Main Testimonials Content -->
+        <h2 class="sticky z-10 mb-8 text-3xl font-semibold text-orange-700 max-lg:mt-28">
+          What Our Clients Say
+        </h2>
+        <div class="space-y-6">
+          <blockquote class="text-lg italic text-gray-600">
+            "The services were fantastic! Our experience was seamless and
+            professional."
+          </blockquote>
+          <blockquote class="text-lg italic text-gray-600">
+            "Absolutely wonderful experience from start to finish. Highly
+            recommend!"
+          </blockquote>
+          <blockquote class="text-lg italic text-gray-600">
+            "A top-notch team that exceeded our expectations in every way."
+          </blockquote>
+        </div>
+      </section>
+    </section>
+    <!-- subscribe -->
+     <section class="w-full mb-24 lg:px-20">
+      <div class="flex flex-col items-center justify-between w-full p-6 bg-black lg:space-x-10 lg:p-20 lg:flex-row lg:rounded-3xl">
+        <div class="w-full lg:w-1/2">
+          <small class="tracking-wider text-orange-700 text-md lg:text-lg font-extralight">SUBSCRIBE</small>
+          <h1 class="lg:text-5xl text-3xl text-slate-200 font-['Roboto Mono'] capitalize font-bold lg:leading-[60px] leading-[40px]">
+            Catch all the latest proton podcasts in your inbox.
+          </h1>
+        </div>
+        <form action="#" class="w-full mt-10 lg:w-1/2 max-lg:">
+          <div class="flex items-center justify-between w-full border-[0.5px] border-orange-600 p-2 rounded-2xl">
+            <input type="text" name="Email" id="email" placeholder="Email" class="w-full px-4 py-2 text-lg text-orange-400 bg-transparent rounded-md outline-none font-extralight placeholder:text-orange-400 placeholder:font-extralight">
+            <button class="py-3 text-sm font-light text-black bg-orange-500 px-7 rounded-xl">Subscribe</button>
+          </div>
+        </form>
+      </div>
+     </section>
+    <!-- Footer -->
+     
+    <footer class="w-full px-6 py-10 font-light lg:px-16 text-slate-500">
+      <div class="w-full px-4 mx-auto lg:space-x-10 md:flex md:justify-between">
+        <!-- Section 1 -->
+        <div class="mb-6 lg:w-1/3 md:mb-0">
+          <h3 class="mb-4 text-2xl font-semibold text-orange-500">
+            Proton Podcasts
+          </h3>
+          <p class="mb-2">
+            Learn more about our mission, vision, and values. We are a
+            professional podcasting company that provides a platform for
+            individuals and businesses to share their stories and experiences.
+          </p>
+          
+        </div>
+
+        <!-- Section 2 -->
+        <div class="mb-6 lg:w-1/3 md:mb-0">
+          <h3 class="mb-4 text-lg font-semibold text-orange-500">
+            Quick Links
+          </h3>
+          <ul class="columns-2 lg:gap-10">
+            <li>
+              <a href="#" class="block mb-2 hover:text-white"
+                >Lifestyle Podcasts</a
+              >
+              <a href="#" class="block mb-2 hover:text-white">Lifestyle</a>
+            </li>
+            <li>
+              <a href="#" class="block mb-2 hover:text-white"
+                >Fashion Podcasts</a
+              >
+              <a href="#" class="block mb-2 hover:text-white">Fashion</a>
+            </li>
+            <li>
+              <a href="#" class="block mb-2 hover:text-white"
+                >Entertainment Podcasts</a
+              >
+              <a href="#" class="block mb-2 hover:text-white">Entertainment</a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-white"
+                >Exclusive Interviews Podcasts</a
+                >Exclusive Interviews</a
+              >
+            </li>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="lg:w-1/3">
+          <h3 class="w-1/3 mb-4 text-lg font-semibold text-orange-500">Contact</h3>
+          <p class="mb-2">Email: support@example.com</p>
+          <p class="mb-2">Phone: +123 456 7890</p>
+          <p>Address: Kampala Uganda</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 mt-10 text-center border-t border-gray-500 opacity-50">
+        <p class="text-gray-400">
+          Copyright &copy; 2024 Proton Podcasts. All rights reserved.
+        </p>
+      </div>
+      
+    </footer>
+    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
